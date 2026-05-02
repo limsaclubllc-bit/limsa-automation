@@ -1,0 +1,66 @@
+{
+  "_comment": "LIMSA CLUB Otomasyon Sistemi — Sistem Ayarları",
+  "system": {
+    "name": "Limsa Club Otomasyon",
+    "version": "1.0.0",
+    "timezone": "Europe/Istanbul",
+    "language": "tr"
+  },
+  "platforms": {
+    "trendyol": {
+      "enabled": true,
+      "check_interval_minutes": 30,
+      "base_url": "https://api.trendyol.com/sapigw"
+    },
+    "shopify": {
+      "enabled": true,
+      "check_interval_minutes": 30,
+      "api_version": "2024-01"
+    },
+    "etsy": {
+      "enabled": false,
+      "check_interval_minutes": 60
+    },
+    "stripe": {
+      "enabled": true,
+      "check_interval_minutes": 60
+    }
+  },
+  "inventory": {
+    "low_stock_threshold": 5,
+    "critical_stock_threshold": 2,
+    "sync_enabled": true
+  },
+  "pricing": {
+    "currency_pair": "USD_TRY",
+    "fallback_rate": 38.0,
+    "trendyol_margin_percent": 45,
+    "etsy_margin_percent": 50,
+    "auto_update_prices": false
+  },
+  "notifications": {
+    "telegram_enabled": true,
+    "gmail_enabled": true,
+    "notify_new_orders": true,
+    "notify_low_stock": true,
+    "notify_errors": true,
+    "notify_daily_report": true
+  },
+  "reports": {
+    "daily_report_time": "08:00",
+    "weekly_report_day": "monday",
+    "report_language": "tr"
+  },
+  "shopify_products": {
+    "celeste_dress":   {"shopify_id": "9838651310375", "sku": "23K030400727", "trendyol_barcode": ""},
+    "cora_blouse":     {"shopify_id": "9838652293415", "sku": "23K020302445", "trendyol_barcode": ""},
+    "daila_dress":     {"shopify_id": "9840254353703", "sku": "23K030400726", "trendyol_barcode": ""},
+    "ciel_blouse":     {"shopify_id": "9931619729703", "sku": "17Y020302073", "trendyol_barcode": ""},
+    "samara_dress":    {"shopify_id": "9968154476839", "sku": "24K040400745", "trendyol_barcode": ""},
+    "lario_dress":     {"shopify_id": "10022218301735","sku": "25Y040400816", "trendyol_barcode": ""},
+    "ruffle_blouse":   {"shopify_id": "10048774504743","sku": "17Y020302095", "trendyol_barcode": ""},
+    "seraphine_dress": {"shopify_id": "10049354170663","sku": "23Y030400722", "trendyol_barcode": ""},
+    "astra_dress":     {"shopify_id": "10052919755047","sku": "24Y040400766", "trendyol_barcode": ""},
+    "viva_dress":      {"shopify_id": "10098474090791","sku": "764",          "trendyol_barcode": ""}
+  }
+}

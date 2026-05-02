@@ -1,0 +1,18 @@
+{
+  "last_shopify_order_id": 0,
+  "last_trendyol_order_ts": 0,
+  "last_etsy_order_id": 0,
+  "telegram_offset": 0,
+  "last_run": {
+    "order_sync": null,
+    "stock_sync": null,
+    "daily_report": null,
+    "weekly_report": null
+  },
+  "stats": {
+    "total_shopify_orders": 0,
+    "total_trendyol_orders": 0,
+    "total_etsy_orders": 0
+  },
+  "updated_at": null
+}

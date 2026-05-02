@@ -1,0 +1,27 @@
+# Credentials — asla GitHub'a gönderme!
+config/credentials.env
+*.env
+.env
+
+# Log dosyaları
+logs/
+*.log
+
+# Exchange rate cache (opsiyonel — commit etmek istemiyorsan)
+# data/exchange_rates.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,38 @@
+name: "Haftalık Rapor (Pazartesi 08:00)"
+
+on:
+  schedule:
+    # Her pazartesi 05:00 UTC = 08:00 TR
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+
+jobs:
+  weekly-report:
+    name: Haftalık Rapor
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodu çek
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Haftalık rapor gönder
+        env:
+          TRENDYOL_SUPPLIER_ID:   ${{ secrets.TRENDYOL_SUPPLIER_ID }}
+          TRENDYOL_API_KEY:       ${{ secrets.TRENDYOL_API_KEY }}
+          TRENDYOL_API_SECRET:    ${{ secrets.TRENDYOL_API_SECRET }}
+          TRENDYOL_TOKEN:         ${{ secrets.TRENDYOL_TOKEN }}
+          SHOPIFY_STORE_URL:      ${{ secrets.SHOPIFY_STORE_URL }}
+          SHOPIFY_ACCESS_TOKEN:   ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+          STRIPE_SECRET_KEY:      ${{ secrets.STRIPE_SECRET_KEY }}
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
+          GMAIL_SENDER:           ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD:     ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_REPORT_RECIPIENT: ${{ secrets.GMAIL_REPORT_RECIPIENT }}
+          CURRENCY_API_KEY:       ${{ secrets.CURRENCY_API_KEY }}
+        run: python scheduler.py --task daily_report

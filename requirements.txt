@@ -1,0 +1,25 @@
+# Limsa Club Otomasyon — Python Bağımlılıkları
+# Kurulum: pip install -r requirements.txt
+# Python 3.10+ gerekli
+
+# Temel HTTP (stdlib urllib kullanılıyor, requests opsiyonel)
+# requests==2.31.0   # stdlib urllib yeterli; eklemek isterseniz aktif edin
+
+# Ortam değişkeni yükleyici (stdlib ile yapılıyor, python-dotenv opsiyonel)
+# python-dotenv==1.0.0
+
+# Zaman dilimi desteği (Python 3.9+ stdlib zoneinfo ile yapılıyor)
+# pytz==2024.1
+
+# Test için
+# pytest==8.1.0
+# pytest-mock==3.12.0
+
+# Tüm bağımlılıklar Python stdlib'den karşılanıyor.
+# Harici kütüphane GEREKMEZ — bu sayede GitHub Actions'ta
+# pip install adımı olmadan da çalışır.
+#
+# İsteğe bağlı eklemeler:
+#   requests     — urllib yerine kullanmak isterseniz
+#   python-dotenv — .env yükleyici
+#   stripe       — Stripe SDK (şu an HTTP ile yapılıyor)
