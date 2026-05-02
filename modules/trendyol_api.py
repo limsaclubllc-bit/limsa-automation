@@ -18,11 +18,12 @@ BASE_URL = "https://api.trendyol.com/sapigw"
 
 class TrendyolAPI:
     def __init__(self):
-        self.supplier_id = cfg.TRENDYOL_SUPPLIER_ID
-        self.token       = cfg.TRENDYOL_TOKEN
+        self.supplier_id    = cfg.TRENDYOL_SUPPLIER_ID
+        self.token          = cfg.TRENDYOL_TOKEN
+        integration_code    = cfg.TRENDYOL_INTEGRATION_CODE or "SelfIntegration"
         self.headers = {
             "Authorization": f"Basic {self.token}",
-            "User-Agent":    f"{self.supplier_id} - SelfIntegration",
+            "User-Agent":    f"{self.supplier_id} - {integration_code}",
             "Content-Type":  "application/json",
         }
 
