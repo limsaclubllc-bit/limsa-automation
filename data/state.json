@@ -6,7 +6,7 @@
   "last_run": {
     "order_sync": null,
     "stock_sync": null,
-    "daily_report": "2026-05-24T10:50:49.595217",
+    "daily_report": "2026-05-25T16:02:33.578334",
     "weekly_report": null
   },
   "stats": {
@@ -14,5 +14,5 @@
     "total_trendyol_orders": 0,
     "total_etsy_orders": 0
   },
-  "updated_at": "2026-05-24T10:50:49.595243"
+  "updated_at": "2026-05-25T16:02:33.578360"
 }
